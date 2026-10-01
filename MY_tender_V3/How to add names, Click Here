@@ -1,0 +1,44 @@
+In the sidebar on the left, click on streamlitWin_app.py to open it.
+
+Click on database.py to open it in a second tab.
+
+Step 2: Update the Dashboard (streamlitWin_app.py)
+
+1. In streamlitWin_app.py, scroll down to the very bottom of the file (inside the Tab 3 section).
+
+2. Look for the block of code that starts with team_accounts = {. You can press Ctrl + f to search team_accounts.
+
+3. Look at the very last person on the list (currently "Faiz").
+
+4. CRITICAL: Add a comma , at the absolute end of the last person's line.
+
+5. Hit Enter to create a new line.
+
+6. Type the new person's name and their target keywords using this exact format:
+"Sarah": ["Hospital", "Klinik", "Perubatan"]
+
+(Your updated block should now look like this):
+
+Python
+        "Ashraf": ["MOSTI", "MINDEF", "Pertahanan", "TM", "Telekom", "Tenaga Nasional"],
+        "Faiz": ["Immigration", "Imigresen", "Pendaftaran", "KDN", "Kewangan", "MOF"],
+        "Sarah": ["Hospital", "Klinik", "Perubatan"]
+
+Step 3: Update the Background Monitor (database.py)
+
+1. Switch to your database.py tab in VS Code.
+
+2. Scroll to the bottom of the file until you see the export_to_excel_team_report function. You can also press Ctrl + f to search, more efficient.
+
+3. Find the exact same team_accounts = { block here.
+
+4. Make the exact same addition you just did in Step 2. You can just copy the entire team_accounts block from the first file and paste it over this one so they match perfectly.
+
+Step 4: Save and Restart
+
+1. Press Ctrl + S to save your changes in both files. *HIGHLY IMPORTANT*
+
+Additional notes:
+To update the Dashboard: Go to your web browser where the MY-Tender Tracker is open. Click the "Rerun" button in the top right corner (or just refresh the page).
+
+To update the Background Monitor: If the monitor is currently running in your VS Code terminal, click into that terminal, press Ctrl + C to shut it down, and then type python monitorWin.py and hit Enter to restart it.

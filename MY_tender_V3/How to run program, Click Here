@@ -1,0 +1,60 @@
+Step 1: Install Python (Do not skip the Golden Rule!)
+
+Since Python is not on this laptop yet, this is the most critical step to prevent the 'pip' is not recognized error.
+
+1. Open the web browser and go to python.org/downloads.
+
+2. Download the Windows installer.
+
+3. Open the installer, and STOP on the very first screen.
+
+4. Check the box at the absolute bottom left that says "Add python.exe to PATH".
+
+5. Click "Install Now" and let it finish.
+
+Step 2: Transfer and Extract the Code
+
+Remember the "folder-within-a-folder" trap caused by Mac zip files!
+
+1. Transfer your MY_tender_V2.zip file to the new laptop.
+
+2. Right-click and extract it.
+
+3. Open the extracted folder. If you see a __MACOSX folder and another MY_tender_V2 folder inside it, grab that inner MY_tender_V2 folder and drag it directly to the Desktop or Documents folder so it sits by itself.
+
+Step 3: Open the Correct Folder in VS Code
+
+1. Open VS Code.
+
+2. Click File > Open Folder... at the top left.
+
+3. Select your clean, standalone MY_tender_V2 folder.
+
+4. Click "Yes, I trust the authors" if the security prompt appears.
+
+5. Go to the top menu and click Terminal > New Terminal. (Make sure the path at the bottom ends simply in \MY_tender_V2>).
+
+Step 4: Run the 3 Magic Setup Commands
+
+Since you are inside VS Code, running these manually is the best way to watch the progress and guarantee everything installs perfectly. Type these exactly as written, hitting Enter after each one and waiting for it to finish:
+
+1. Command 1 (Prep the installer):
+python -m pip install --upgrade pip
+
+2. Command 2 (Install the libraries):
+python -m pip install streamlit pandas playwright plyer openpyxl
+
+3. Command 3 (Install the invisible browser):
+python -m playwright install chromium
+
+Step 5: Launch the Engine!
+
+You are fully deployed. The laptop now has the code, the environment, the libraries, and the browser engine.
+
+To open the UI Dashboard:
+1. Type this in the terminal and hit Enter:
+python -m streamlit run streamlitWin_app.py
+
+2. To run the Background Monitor:
+Open a second terminal tab (click the + icon in the terminal panel) and run:
+python monitorWin.py
